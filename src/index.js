@@ -17,11 +17,11 @@ module.exports = function check(str, bracketsConfig) {
       if (array[i] === bracketsConfig[j][0]) {
         stack.push(array[i]);
         l++;
-        if (stack[l-1] === array[i] && bracketsConfig[j][0] === bracketsConfig[j][1]) {
+        if (stack[l-2] === array[i] && bracketsConfig[j][0] === bracketsConfig[j][1]) {
           stack.pop();
-          
+          stack.pop();
           l--;
-          
+          l--;
         }
         //console.log(stack);
         break;
